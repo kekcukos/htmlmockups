@@ -1,0 +1,161 @@
+@column-width: 80px;
+@column-margin: 10px;
+@gray: #eeeeee;
+@red: #fb565a;
+@green: #27ae61;
+@yellow: #efc84a;
+@light-blue: #ecf0f1;
+@blue: #3598db;
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.box-sizing-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;   
+}
+
+.clearfix {
+    &:after{
+        content:'';
+        clear:both;
+        display:table;
+    }
+}
+
+.column-width(@size) {width: @size*@column-width;}
+.column-offset(@size) {margin-left: @size*@column-width;}
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.column {
+    .box-sizing-box;
+    float: left; 
+}
+
+.row {.clearfix;}
+
+.bubble {
+    position: relative;
+    
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    
+    width: 300px;
+    height: 50px;
+
+    .box-sizing-box;
+    margin: 0 auto;
+    padding: 10px 20px;
+    
+    border-radius: 6px;
+    
+    &:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: @green;
+        border-width: 10px;
+        margin-left: -10px;    
+    }
+}
+
+.bubble-green {
+    color: #FFF;
+    background-color: @green;    
+}
+
+.feedback {
+    .row {
+        margin-top: 40px;
+    }
+    
+    .column {
+        width: 220px;
+        margin-right: 110px;
+        
+        text-align: center;
+        
+        &:last-child {
+            margin-right: 0;   
+        }
+        .person {
+            margin: 0 auto;
+            
+            height: 160px;
+            width:  140px;
+            
+            background-image: url('http://placehold.it/140x160');
+            background-position: 50% 50%;
+            
+            border-radius: 6px;
+            border-bottom: 5px solid @green;
+        }
+        .name {
+            margin-top: 10px;
+            
+            font-size: 18px;            
+            color: @green;
+            text-decoration: underline;
+        }
+        blockquote {
+            margin: 10px 0 0 0;
+            font-style: italic;
+        }
+    }
+}
+
+.stats {
+    .row {
+        margin-top: 40px;
+    }
+    
+    .column {
+        width: 280px;
+        margin-right: 30px;
+        text-align: center;
+
+            &:last-child {
+            margin-right: 0;   
+        }
+        
+        .number, .description {
+            min-height: 40px;
+            padding: 20px 10px;
+        }
+        
+        .number {
+            .box-sizing-box;
+            
+            border-radious: 6px;
+            
+            font-size: 36px;
+            color: #fff;
+            background-color: @blue;
+        }
+        
+        .description {
+            vertical-align: middle;
+            
+            font-size: 22px;
+            font-weight: lighter;
+            color: @blue;
+            background-color: @light-blue;
+        }
+    }
+}

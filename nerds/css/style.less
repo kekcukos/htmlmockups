@@ -1,0 +1,146 @@
+@column-width: 80px;
+@column-margin: 10px;
+@gray: #eeeeee;
+@red: #fb565a;
+@green: #00ca74;
+@yellow: #efc84a;
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.box-sizing-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;   
+}
+
+.clearfix {
+    &:after{
+        content:'';
+        clear:both;
+        display:table;
+    }
+}
+
+.column-width(@size) {width: @size*@column-width;}
+.column-offset(@size) {margin-left: @size*@column-width;}
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto;   
+}
+
+.column {
+    padding: 0 @column-margin;
+    .box-sizing-box;
+    float: left; 
+}
+
+.row {.clearfix;}
+
+.column-1 {.column-width(1);}
+.column-2 {.column-width(2);}
+.column-3 {.column-width(3);}
+.column-4 {.column-width(4);}
+.column-5 {.column-width(5);}
+.column-6 {.column-width(6);}
+.column-7 {.column-width(7);}
+.column-8 {.column-width(8);}
+.column-9 {.column-width(9);}
+.column-10 {.column-width(10);}
+.column-11 {.column-width(11);}
+
+.column-offset-1 {.column-offset(1);}
+.column-offset-2 {.column-offset(2);}
+.column-offset-3 {.column-offset(3);}
+.column-offset-4 {.column-offset(4);}
+.column-offset-5 {.column-offset(5);}
+.column-offset-6 {.column-offset(6);}
+.column-offset-7 {.column-offset(7);}
+.column-offset-8 {.column-offset(8);}
+.column-offset-9 {.column-offset(9);}
+.column-offset-10 {.column-offset(10);}
+
+.no-margin-left {
+    margin-left: 0;
+}
+
+.no-margin-right {
+    margin-right: 0;   
+}
+
+#main_menu {
+    .box-sizing-box;
+    height: 85px;
+    
+    background-color: @gray;
+    ul {
+        list-style: none;
+        li {
+            display: inline;
+        }
+    }
+}
+
+.btn {
+    .box-sizing-box;
+    height: 38px;
+    border: 0;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn-middle {
+    .btn;
+    width: @column-width * 2;
+}
+
+.btn-large {
+    .btn;
+    width: @column-width * 3;
+}
+
+.btn-red {
+    background-color: @red;
+    color: #ffffff;
+}
+
+.btn-yellow {
+    background-color: @yellow;
+    color: #ffffff;
+}
+
+.btn-green {
+    background-color: @green;
+    color: #ffffff;
+}
+
+.slider {
+    .box-sizing-box;
+    background-color: @gray;
+    position: relatve;
+    height: 350px;  
+    padding: 80px 0;
+    .slider-slide {
+        .row;
+        .slider-slide-description {
+            .column;
+            .column-5;            
+        }
+    }
+    .slider-controls {
+        position: absolute;
+        left: 50%;
+        top: 100px;
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline;
+        }
+    }
+}
