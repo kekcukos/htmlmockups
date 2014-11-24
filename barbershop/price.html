@@ -4,68 +4,77 @@
     <title>BARBERSHOP BORODINSKI - ПРАЙС-ЛИСТ</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="header">
         <div class="wrapper">
-            <ul class="main-menu">
-                <li>ГЛАВНАЯ</li>
-                <li>ИНФОРМАЦИЯ</li>
-                <li>НОВОСТИ</li>
-                <li class="active">ПРАЙС ЛИСТ</li>
-                <li>МАГАЗИН</li>
-                <li>КОНТАКТЫ</li>
-            </ul>
-            
-            <div class="acc-actions">
-                <div class="login">ВХОД</div>
+            <div class="row">
+                <ul class="main-menu column column-10">
+                    <li><a href="#">ГЛАВНАЯ</a></li>
+                    <li><a href="#">ИНФОРМАЦИЯ</a></li>
+                    <li><a href="#">НОВОСТИ</a></li>
+                    <li class="active"><span>ПРАЙС ЛИСТ</span></li>
+                    <li><a href="#">МАГАЗИН</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+
+                <div class="acc-actions column column-1 column-offset-1">
+                    <a href="#" class="login">ВХОД</a>
+                </div>
             </div>
         </div>
     </header>
     
-    <div class="content price">
+    <div class="content page-price">
         <div class="wrapper">
-            <div class="breadcrumbs">
+            <div class="breadcrumbs margin-left">
                 <h2>BARBERSHOP BORODINSKI - ПРАЙС-ЛИСТ</h2>
                 <span>ГЛАВНАЯ <span class="icon-diamond"></span> ПРАЙС-ЛИСТ</span>
             </div>
-        </div>
-        <h1 class="line-through">ИСТИННО МУЖСКАЯ КЛАССИКА</h1>
-
-        <div class="row">
-            <div class="column float-left">
-                <h3>МЫ ИСПОЛЬЗУЕМ ТОЛЬКО ЛУЧШИЕ СРЕДСТВА:</h3>
-                <ul class="list-diamond">
-                    <li>BAXTER OF CALIFORNIA</li>
-                    <li>MR NATTY</li>
-                    <li>SUAVECITO</li>
-                    <li>MALIN+GOETZ</li>
-                </ul>
-
-                <h3>НЕСКОЛЬКО СЛОВ О НАС:</h3>
-
-                <p>НАША ПАРИКМАХЕРСКАЯ ЗАНИМАЕТСЯ ИСКЛЮЧИТЕЛЬНО МУЖСКИМИ СТРИЖКАМИ. СТРИЖКА КАЖДОГО КЛИЕНТА ДЛЯ НАС - ЭТО УНИКАЛЬНАЯ И ПРОДУМАННАЯ ДО МЕЛОЧЕЙ РАБОТА. МЫ НЕ РАБОТАЕМ НА КОЛИЧЕСТВО, МЫ РАБОТАЕМ НА КАЧЕСТВО.</p>
+            <div class="line-through">
+                <h1>ИСТИННО МУЖСКАЯ КЛАССИКА</h1>
             </div>
-            <div class="column float-right">
-                <h3>ЦЕНЫ НА УСЛУГИ НАШИХ МАСТЕРОВ:</h3>
-                <table>
-                    <tr>
-                        <td>СТРИЖКА</td>
-                        <td>1500 Р.</td>
-                    </tr>
-                    <tr>
-                        <td>СТРИЖКА БОРОДЫ</td>
-                        <td>500 Р.</td>
-                    </tr>
-                    <tr>
-                        <td>НАКРУТКА УСОВ</td>
-                        <td>350 Р.</td>
-                    </tr>
-                </table>
 
-                <p>НАША МАСТЕРСКАЯ РАСПОЛОЖЕНА В ЦЕНТРЕ ГОРОДА, ПОЭТОМУ СДЕЛАТЬ СТИЛЬНУЮ СТРИЖКУ МОЖНО В ЛЮБОЕ ВРЕМЯ, ДАЖЕ В ОБЕДЕННЫЙ ПЕРЕРЫВ. ЗДЕСЬ ВЫ МОЖЕТЕ ПОГРУЗИТЬСЯ В УДОБНУЮ ДЛЯ ВАС АТМОСФЕРУ, ЧУВСТВОВАТЬ СЕБЯ КОМФОРТНО И СВОБОДНО!</p>
+            <div class="row">
+                <div class="column column-5">
+                    <h3>МЫ ИСПОЛЬЗУЕМ ТОЛЬКО ЛУЧШИЕ СРЕДСТВА:</h3>
+                    <ul class="list-diamond">
+                        <li>BAXTER OF CALIFORNIA</li>
+                        <li>MR NATTY</li>
+                        <li>SUAVECITO</li>
+                        <li>MALIN+GOETZ</li>
+                    </ul>
+                </div>
+                <div class="column column-6 column-offset-1">
+                    <h3>ЦЕНЫ НА УСЛУГИ <br>НАШИХ МАСТЕРОВ:</h3>
+                    <table class="black">
+                        <tr>
+                            <td>СТРИЖКА</td>
+                            <td>1500 Р.</td>
+                        </tr>
+                        <tr>
+                            <td>СТРИЖКА БОРОДЫ</td>
+                            <td>500 Р.</td>
+                        </tr>
+                        <tr>
+                            <td>НАКРУТКА УСОВ</td>
+                            <td>350 Р.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row about-us">
+                <h3 class="margin-left">НЕСКОЛЬКО СЛОВ О НАС:</h3>     
+                <div class="column column-5">
+                    <p>НАША ПАРИКМАХЕРСКАЯ ЗАНИМАЕТСЯ ИСКЛЮЧИТЕЛЬНО МУЖСКИМИ СТРИЖКАМИ. СТРИЖКА КАЖДОГО КЛИЕНТА ДЛЯ НАС - ЭТО УНИКАЛЬНАЯ И ПРОДУМАННАЯ ДО МЕЛОЧЕЙ РАБОТА. МЫ НЕ РАБОТАЕМ НА КОЛИЧЕСТВО, МЫ РАБОТАЕМ НА КАЧЕСТВО.</p>            
+                </div>
+                <div class="column column-6 column-offset-1">
+                    <p>НАША МАСТЕРСКАЯ РАСПОЛОЖЕНА В ЦЕНТРЕ ГОРОДА, ПОЭТОМУ СДЕЛАТЬ СТИЛЬНУЮ СТРИЖКУ МОЖНО В ЛЮБОЕ ВРЕМЯ, ДАЖЕ В ОБЕДЕННЫЙ ПЕРЕРЫВ. ЗДЕСЬ ВЫ МОЖЕТЕ ПОГРУЗИТЬСЯ В УДОБНУЮ ДЛЯ ВАС АТМОСФЕРУ, ЧУВСТВОВАТЬ СЕБЯ КОМФОРТНО И СВОБОДНО!</p>            
+                </div>
             </div>
         </div>
     </div>
@@ -73,20 +82,23 @@
     <footer class="footer">
         <div class="wrapper">
             <div class="row">
-                <div class="column contacts">
+                <div class="column column-5">
                     <p>BARBERSHOP "BORODINSKI"</p>
                     <p>АДРЕС: Г. МОСКВА, УЛ. сОБАКИ ПАВЛОВА, Д. 13</p>
                     <p>ТЕЛЕФОН: +7 (495) 666-02-666</p>
                 </div>
-                <div class="column social">
-                    <p>ДАВАЙТЕ ДРУЖИТЬ!</p>
-                    <div class="social-btns">
+                <div class="column column-2">
+                    <p class="text-center">ДАВАЙТЕ ДРУЖИТЬ!</p>
+                    <div class="social">
                         <a class="social-btn social-vk" href="#"></a>
                         <a class="social-btn social-fb" href="#"></a>
                         <a class="social-btn social-insta" href="#"></a>
                     </div>
                 </div>
-                <div class="column copyright"></div>
+                <div class="column column-2 column-offset-3">
+                    <p class="text-center">ДИЗАЙН САЙТА:</p>
+                    <div class="btn-auto btn-black">GLUKHANKO.RU</div>
+                </div>
             </div>
         </div>
     </footer>

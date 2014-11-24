@@ -4,16 +4,20 @@
     <title>Sedona</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script>
+        setTimeout(function(){window.location.reload();}, 10000);
+    </script>
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
-            <ul>
+            <ul class="clearfix">
                 <li>ИНФОРМАЦИЯ</li>
                 <li>ФОТО И ВИДЕО</li>
-                <li class="logo"></li>
+                <li class="logo">&nbsp;</li>
                 <li>КАРТА ШТАТА</li>
                 <li>ГОСТИНИЦЫ</li>
             </ul>
@@ -21,40 +25,41 @@
         
         <div class="hero">
             <div class="welcome">WELCOME TO THE GORGEOUS</div>
-            <div class="title">SEDONA</div>
+            <h1 class="title">SEDONA</h1>
             <div class="why">Because the Grand Canyon sucks!</div>
             <div class="bottom-figure"></div>
         </div>
         
         <div class="about-sedona">
-            <div class="text-bold">СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</div>
+            <div class="<text-bold></text-bold>">СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</div>
             <div class="text-normal">РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</div>
         </div>
         
         <div class="feature real-city">
             <div class="row feature-img">
-                <div class="column column-1 feature-text">
+                <div class="column column-1-3 feature-text">
                     <div class="text-bold">НАСТОЯЩИЙ ГОРОДОК</div>
                     <div class="text-normal text-line-through">№1</div>
                     <div class="text-normal">СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</div>
                 </div>
-                <div class="column column-2 feature-img feature-img"></div>   
+                <div class="column column-2-3 feature-img feature-img"></div>   
             </div>
             <div class="row feature-explained">
-                <ul>
-                    <li class="feature-icon feature-icon-home">
-                        <div class="text-bold">ЖИЛЬЕ</div>
-                        <div class="text-normal">РЕКОМЕНДУЕМ ПОЖИТЬ В НАСТОЯЩЕМ МОТЕЛЕ, ВСЕ КАК В КИНО.</div>
-                    </li>
-                    <li class="feature-icon feature-icon-food">
-                        <div class="text-bold">ЕДА</div>
-                        <div class="text-normal">ВСЕГДА ЗАКАЗЫВАЙ ФИРМЕННЫЙ БУРГЕР, ВЫ НЕ РАЗОЧАРУЕТЕСЬ!</div>
-                    </li>
-                    <li class="feature-icon feature-icon-present">
-                        <div class="text-bold">СУВЕНИРЫ</div>
-                        <div class="text-normal">НЕ ТОЛЬКО КИТАЙСКОГО, НА И МЕСТНОГО ПРОИЗВОДСТВА!</div>
-                    </li>
-                </ul>
+                <article class="column column-1-3">
+                    <div class="feature-icon feature-icon-home"></div>
+                    <div class="text-bold">ЖИЛЬЕ</div>
+                    <div class="text-normal">РЕКОМЕНДУЕМ ПОЖИТЬ В НАСТОЯЩЕМ МОТЕЛЕ, ВСЕ КАК В КИНО.</div>
+                </article>
+                <article class="column column-1-3">
+                    <div class="feature-icon feature-icon-food"></div>
+                    <div class="text-bold">ЕДА</div>
+                    <div class="text-normal">ВСЕГДА ЗАКАЗЫВАЙ ФИРМЕННЫЙ БУРГЕР, ВЫ НЕ РАЗОЧАРУЕТЕСЬ!</div>
+                </article>
+                <article class="column column-1-3">
+                    <div class="feature-icon feature-icon-present"></div>      
+                    <div class="text-bold">СУВЕНИРЫ</div>
+                    <div class="text-normal">НЕ ТОЛЬКО КИТАЙСКОГО, НА И МЕСТНОГО ПРОИЗВОДСТВА!</div>
+                </article>
             </div>
         </div>
         
@@ -68,89 +73,86 @@
                 <div class="column column-2 feature-img feature-img"></div>   
             </div>
             <div class="row feature-explained">
-                <ul>
-                    <li>
+                    <article class="column column-1-3">
                         <div class="text-bold">НЕБОЛЬШАЯ ПЛОЩАДЬ</div>
                         <div class="text-normal text-line-through">№3</div>
                         <div class="text-normal">ВСЕ ДОСТОПРИМЕЧАТЕЛЬНОСТИ НАХОДЯТСЯ ОЧЕНЬ БЛИЗКО</div>
-                    </li>
-                    <li>
+                    </article>
+                    <article class="column column-1-3">
                         <div class="text-bold">КРАСИВАЯ ДОРОГА</div>
                         <div class="text-normal text-line-through">№4</div>
                         <div class="text-normal">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА СОВСЕМ НЕ СКУЧНО!</div>
-                    </li>
-                    <li>
+                    </article>
+                    <article class="column column-1-3">
                         <div class="text-bold">МАЛО ТУРИСТОВ</div>
                         <div class="text-normal text-line-through">№5</div>
                         <div class="text-normal">БОЛЬШИНСТВО ЕДЕТ В ГРАНД КАНЬОН И ТОЛИТСЯ ТАМ</div>
-                    </li>
-                </ul>
+                    </article>
             </div>
         </div>
         
-        <div class="row interested">
-            <div class="column column-3">
-                <h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
-                <div class="text-normal">УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</div>
-                <div class="search">
-                    <header class="text-bold">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</header>
-                    <form action="#" method="GET">
-                        <div class="row">
-                            <label for="arrival">ДАТА ЗАЕЗДА:</label>
-                            <div class="input-field">
-                                <input type="text" id="arrival">
-                                <i class="input-icon input-icon-calendar"></i>
-                            </div>
+        <div class="interested">
+            <h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
+            <div class="text-normal">УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</div>
+            <div class="search">
+                <header class="text-bold">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</header>
+                <form action="#" method="GET">
+                    <div class="row">
+                        <label for="arrival">ДАТА ЗАЕЗДА:</label>
+                        <div class="input-field">
+                            <input type="text" id="arrival">
+                            <i class="input-icon input-icon-calendar"></i>
                         </div>
-                        <div class="row">
-                            <label for="departure">ДАТА ВЫЕЗДА:</label>
-                            <div class="input-field">
-                                <input type="text" id="departure">
-                                <i class="input-icon input-icon-calendar"></i>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <label for="departure">ДАТА ВЫЕЗДА:</label>
+                        <div class="input-field">
+                            <input type="text" id="departure">
+                            <i class="input-icon input-icon-calendar"></i>
                         </div>
-                        <div class="row">
-                           <ul>
-                               <li>
-                                   <label for="adults">ВЗРОСЛЫЕ:</label>
-                               </li>
-                               <li>
-                                   <div class="number">
-                                       <div class="minus"></div>
-                                       <input type="number" readonly id="adults">
-                                       <div class="plus"></div>
-                                   </div>
-                               </li>
-                               <li>
-                                   <label class="text-right" for="children">ДЕТИ:</label>
-                               </li>
-                               <li>
-                                   <div class="number">
-                                       <div class="minus"></div>
-                                       <input type="number" readonly id="children">
-                                       <div class="plus"></div>
-                                   </div>
-                               </li>
-                           </ul>
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="map"></div>
+                    </div>
+                    <div class="row">
+                       <ul>
+                           <li>
+                               <label for="adults">ВЗРОСЛЫЕ:</label>
+                           </li>
+                           <li>
+                               <div class="number">
+                                   <div class="minus"></div>
+                                   <input type="number" readonly id="adults">
+                                   <div class="plus"></div>
+                               </div>
+                           </li>
+                           <li>
+                               <label class="text-right" for="children">ДЕТИ:</label>
+                           </li>
+                           <li>
+                               <div class="number">
+                                   <div class="minus"></div>
+                                   <input type="number" readonly id="children">
+                                   <div class="plus"></div>
+                               </div>
+                           </li>
+                       </ul>
+                    </div>
+                </form>
             </div>
-            
-            <footer class="footer row">
-                <div class="column column-1 hashteg">#VISIT SEDONA</div>
-                <div class="column column-1 social">
-                    <a href="" class="social social-twitter"></a>
-                    <a href="" class="social social-fb"></a>
-                    <a href="" class="social social-u2"></a>
-                </div>
-                <div class="column column-1 copyright">
-                    WEBSITE BY <span class="icon-aaa"></span> FOR <span class="icon-htmlacademy"></span>
-                </div>
-            </footer>
+
+            <div class="map"></div>
         </div>
+
+        <footer class="footer row">
+            <div class="column column-1-3 hashteg">#VISIT SEDONA</div>
+            <div class="column column-1-3 social">
+                <a href="#" class="social social-twitter">&nbsp;</a>
+                <a href="#" class="social social-fb">&nbsp;</a>
+                <a href="#" class="social social-u2">&nbsp;</a>
+            </div>
+            <div class="column column-1-3 copyright">
+                WEBSITE BY <span class="icon-aaa"></span> FOR <span class="icon-htmlacademy"></span>
+            </div>
+        </footer>
+        
     </div>
 </body>
 </html>
