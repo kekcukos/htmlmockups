@@ -4,7 +4,20 @@
 @gray: #adaba9;
 @brown:#663d15;
 
-h1, h2, h3, h4, h5, h6, a, li, td, div, p, span  {
+.box-shadow(@value) {
+    -moz-box-shadow:    @value;
+    -webkit-box-shadow: @value;
+    box-shadow:         @value;
+}
+
+.box-sizing-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5, h6, a, li, td, div, p, span, button, input, select  {
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: bold;
 }
@@ -20,7 +33,7 @@ td, span, a, li, p, div {font-size: 14px;}
     h1 {margin-left: 10px;}
 }
 
-.content {
+.white-noise {
     background-image: url('images/white-noise.jpg');   
 }
 
@@ -35,8 +48,6 @@ td, span, a, li, p, div {font-size: 14px;}
 }
 
 .row {
-    width: 100%;
-    
     &:after {
         ._clearfix;
     }
@@ -49,8 +60,6 @@ td, span, a, li, p, div {font-size: 14px;}
     margin: 0 @column-margin;
     float: left;
 }
-
-.row {._clearfix;}
 
 .column-1 {.column-width(1);}
 .column-2 {.column-width(2);}
@@ -80,6 +89,15 @@ td, span, a, li, p, div {font-size: 14px;}
 
 .float-left {float:left;}
 
+.bg-main {
+    background-color: #000;
+    
+    background-image: url('images/bg-main-fade.png'), url('images/bg-main.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% bottom, 50% top;
+    padding-bottom: 64px;
+}
+
 /* common text formatting */
 h1 {
     font-size: 35px;
@@ -105,16 +123,49 @@ h3 {
 p, li {line-height: 24px;}
 
 .margin-left {margin-left: @column-margin;}
+.relative {position: relative;}
+.float-left {float: left;}
+.float-right {float: right;}
 
-.line-through {}
+.line-through {
+    margin-top:3.55em;
+    margin-bottom:4.5em;
+    text-align:center;
+}
+.line-through h1{
+    position:relative;
+    display:inline;
+    font-size:3.4em;
+    padding:0 25px;
+    line-height:1;
+    z-index:2;
+    background-image: url('images/white-noise.jpg');
+}
+.line-through:after{
+    position:relative;
+    content:"";
+    display:block;
+    border-bottom:2px solid black;
+    top:-1.7em;
+    z-index:1;
+}
 
 .text-center {text-align: center;}
 
-.btn-auto {
+.btn {
     display: block;
-    padding: 16px 0;
+    width: 100%;
+    padding: 14px 0;
+    
+    border: none;
     text-align: center;
-    font-size: 10px;
+    font-size: 14px;    
+}
+
+.btn-small {
+    .btn;
+    display: inline-block;
+   .column-width(2);
 }
 
 .btn-black {
@@ -125,6 +176,8 @@ p, li {line-height: 24px;}
         color: #000;
     }
 }
+
+.btn-lm {margin-left: 16px;}
 
 header.header {
     background-color: #000;
@@ -147,13 +200,23 @@ header.header {
         
         li {
             display: inline;
-            margin-right: 44px;
+            
+            a {
+                padding: 26px 22px;
+                &:hover {background-color: #242424;}
+            }            
+            
+            &.active {
+                padding: 26px 22px; 
+                &:hover{background-color: #242424;}
+            }
+            
+            &.active span {
+                border-bottom: 4px solid #fff;
+                padding-bottom: 22px;
+            }
         }
         
-        li.active {
-            border-bottom: 4px solid #fff;
-            padding-bottom: 22px;
-        }
     }
     
     .acc-actions {
@@ -163,20 +226,23 @@ header.header {
         .login {
             width: 120px;
             text-align: right;
-            padding-left: 16px;
+            padding: 26px 22px 26px 52px;
+
             &:before {
                 content: '';
                 width: 16px;
                 height: 16px;
                 
-                left: -14px;
+                left: 21px;
                 top:  26px;
                 
                 background-image: url('images/icon-login.png');
                 background-repeat: no-repeat;
                 background-position: left center;
                 position: absolute;
-            }            
+            }
+            
+            &:hover {background-color: #242424;}
         }
     }
 }
@@ -296,6 +362,38 @@ footer.footer {
     span {background-color: #e5e5e5;}
 }
 
+.modal {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    
+    margin-left: -240px;
+    
+    padding: 56px 80px;
+    width: 320px;
+    h2 {
+        margin-top: 0;   
+    }
+    
+    .cross {
+        position: absolute;
+        
+        width: 16px;
+        height: 16px;
+
+        top: 20px;
+        right: 20px;
+        
+        background-image: url('images/cross-inactive.png');
+        
+        cursor: pointer;
+        
+        &:hover {
+            background-image: url('images/cross-active.png');   
+        }
+    }
+}
+
 /******************** FORMS *************************/
 .label {
     display: block;
@@ -313,6 +411,8 @@ footer.footer {
     padding-left: 43px;
 
     cursor: pointer;
+    
+    input {.hide}
     
     .pseudo-chk {
         position: absolute;
@@ -342,6 +442,8 @@ footer.footer {
     margin-bottom: 17px;
     padding-left: 43px;
     cursor: pointer;
+    
+    input {.hide}
     
     .pseudo-radio {
         position: absolute;
@@ -374,8 +476,143 @@ footer.footer {
     input[type=radio]:disabled + .input-title  {color:  @gray;}
     input[type=radio]:disabled:checked + .pseudo-radio:after {background-color:  @gray;}
 }
-/******************** /FORMS ************************/
 
+input[type=text],input[type=date],input[type=email] {
+    display: inline-block;
+    .box-sizing-box;
+    border: 2px solid black;
+    
+    padding: 14px 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &.input-auto {width: 100%;}
+    &:hover, &:active {border-color: @brown;}
+}
+
+input[type=submit] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/******************** /FORMS ************************/
+/******************** INDEX PAGE ********************/
+
+.big-logo {
+    height: 200px;
+    padding-top: 60px;
+    background: url('images/logo.png') no-repeat 50% bottom;
+}
+
+.features {
+    margin-bottom: 85px;
+    color: #fff;
+    text-align: center;
+    
+    .feature {position: relative;}
+    
+    h3 {
+        margin-bottom: 85px;
+        font-size: 30px;
+        &:after {
+            content: '';
+
+            width: 30px;
+            height: 30px;
+            top: 42px;
+            left:130px;
+            position: absolute;
+
+            background-image: url('images/diamond-white.png');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }        
+    }
+}
+
+.infoblock {
+    padding: 56px 80px;
+    margin-top: 34px;
+}
+
+.news {
+    li {margin-bottom: 37px;}
+    .date {
+        color: #676664;
+        font-family: Georgia; 
+        font-style: italic;
+    }
+}
+
+.pswitcher {
+    img {
+        width: 285px;
+        height: 165px;
+        border: 7px solid #fff;
+    }
+    
+    .controls {
+        margin-top: 39px;
+    }
+}
+
+.contact-info {margin-bottom: 52px;} 
+
+.lead-form {
+    fieldset {
+        &:after {._clearfix};
+    }
+    
+    input[type=text],input[type=date],input[type=email] {
+        float: left;
+        
+        width: 140px;
+        height: 44px;
+        
+        margin-right:  20px;
+        margin-top:    20px;
+        margin-bottom: 20px;
+                
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }    
+}
+
+.login-form {
+    
+    input {padding-right: 40px;}
+    
+    label {
+        &.icon {position: relative;}
+        &.icon:before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height:16px;
+            right: 18px;
+            top: 0;
+        }
+        
+        &.icon-user:before {
+            background-image: url('images/user.png');   
+        }
+        &.icon-pass:before {
+            background-image: url('images/lock.png');
+        }
+    }
+    
+    a {
+        float: right; 
+        text-decoration: underline; 
+        line-height: 20px; color: black;
+        &:visited, &:hover {
+            color: black;   
+        }
+    }
+}
+/******************** /INDEX PAGE *******************/
 /******************** PRICE PAGE ********************/
 .about-us {
     margin-top: 70px;    
@@ -416,6 +653,7 @@ table.black {
         margin-right: 20px;
         
         background-color: #fff;
+        .box-shadow(0 0 35px -10px #000);
         
         &:nth-child(-n+3) {
             margin-top: 0;   

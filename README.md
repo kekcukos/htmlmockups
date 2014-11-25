@@ -27,3 +27,11 @@ box-sizing: border-box;
 <link rel="stylesheet" href="code-guide.css">
 <script src="code-guide.js"></script>
 ```
+
+```
+.box-shadow(@value) {
+    -moz-box-shadow:    @value;
+    -webkit-box-shadow: @value;
+    box-shadow:         @value;
+}
+```
