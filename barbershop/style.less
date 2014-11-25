@@ -1,9 +1,11 @@
 /* grid */
 @column-width: 60px;
 @column-margin: 10px;
+@gray: #adaba9;
+@brown:#663d15;
 
 h1, h2, h3, h4, h5, h6, a, li, td, div, p, span  {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
     font-weight: bold;
 }
 
@@ -33,6 +35,8 @@ td, span, a, li, p, div {font-size: 14px;}
 }
 
 .row {
+    width: 100%;
+    
     &:after {
         ._clearfix;
     }
@@ -43,7 +47,7 @@ td, span, a, li, p, div {font-size: 14px;}
 
 .column {
     margin: 0 @column-margin;
-    float: left; 
+    float: left;
 }
 
 .row {._clearfix;}
@@ -73,6 +77,8 @@ td, span, a, li, p, div {font-size: 14px;}
 .column-offset-9 {.column-offset(9);}
 .column-offset-10 {.column-offset(10);}
 .column-offset-11 {.column-offset(11);}
+
+.float-left {float:left;}
 
 /* common text formatting */
 h1 {
@@ -114,6 +120,10 @@ p, li {line-height: 24px;}
 .btn-black {
     color: #fff;
     background-color: #000;
+    &:hover {
+        background-color: @brown;
+        color: #000;
+    }
 }
 
 header.header {
@@ -188,6 +198,11 @@ footer.footer {
         padding: 60px 0;    
     }
     
+    .social {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
     .social:after {
         ._clearfix
     }
@@ -195,19 +210,24 @@ footer.footer {
     .social-btn {
         width: 43px;
         height:43px;
-        display: block;
-        float:left;
+        display: inline-block;
         margin-right: 5px;
+        background-color: #000;
         background-repeat: no-repeat;
+        background-position: 50% 50%;
         
-        &:last-child {
-            margin-right: 0;
-        }
+        &:last-child {margin-right: 0;}
+        &:hover {background-color: #fff;}
     }
+        
+    .social-vk       {background-image: url('images/vk-inactive.png');}
+    .social-vk:hover {background-image: url('images/vk-active.png');}
+    .social-fb       {background-image: url('images/fb-inactive.png');}
+    .social-fb:hover {background-image: url('images/fb-active.png');}
+    .social-insta    {background-image: url('images/insta-inactive.png');}
+    .social-insta:hover {background-image: url('images/insta-active.png');}
     
-    .social-vk {background-image: url('images/social_vk.png');}
-    .social-fb {background-image: url('images/social_fb.png');}
-    .social-insta {background-image: url('images/social_insta.png');}
+    .btn-black:hover {background-color: #fff;}
 }
 
 .breadcrumbs {
@@ -233,7 +253,7 @@ footer.footer {
     vertical-align: middle;
     text-align: center;
     
-    margin: 0 auto;
+    margin: 16px auto;
     
     .price {
         width: 108px;        
@@ -247,6 +267,7 @@ footer.footer {
         color: #fff;
         background-color: #000;        
         float: left;
+        &:hover {background-color: @brown;}
     }
     
     &:after {._clearfix;}
@@ -269,6 +290,7 @@ footer.footer {
         color: #fff;
         background-color: #000;
         text-decoration: none;
+        &:hover {background-color: @brown;}
     }
     
     span {background-color: #e5e5e5;}
@@ -278,6 +300,8 @@ footer.footer {
 .label {
     display: block;
     margin-bottom: 18px;
+    
+    &.disabled {color: @gray;}
 }
 
 .label-chk {
@@ -299,15 +323,16 @@ footer.footer {
         height: 16px;
         
         border: 2px solid #000;
+        
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
     }
     
-    input[type=checkbox] + .pseudo-chk {
-        background-color: black;
-    }
-    
-    input[type=checkbox]:checked + .pseudo-chk {
-        background-color: green;
-    }
+    input[type=checkbox] + .pseudo-chk {}
+    input[type=checkbox]:checked  + .pseudo-chk {background-image: url('images/cross-active.png');}
+    input[type=checkbox]:disabled + .pseudo-chk {border-color: @gray;}
+    input[type=checkbox]:disabled:checked + .pseudo-chk {background-image: url('images/cross-inactive.png');}
 }
 
 .label-radio {
@@ -331,12 +356,23 @@ footer.footer {
     }
     
     input[type=radio] + .pseudo-radio {
-        background-color: black;
+        background-color: #000;
     }
     
-    input[type=radio]:checked + .pseudo-radio {
-        background-color: green;
+    input[type=radio]:checked + .pseudo-radio:after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        top: 4px;
+        left: 4px;
+        border-radius: 50%;
+        background-color: white;
     }
+    
+    input[type=radio]:disabled + .pseudo-radio {background-color: #fff; border-color:  @gray;}
+    input[type=radio]:disabled + .input-title  {color:  @gray;}
+    input[type=radio]:disabled:checked + .pseudo-radio:after {background-color:  @gray;}
 }
 /******************** /FORMS ************************/
 
@@ -378,7 +414,6 @@ table.black {
 
         margin-top: 20px;
         margin-right: 20px;
-        padding-bottom: 16px;
         
         background-color: #fff;
         
@@ -395,7 +430,7 @@ table.black {
         }
         
         .description {
-            padding: 17px;
+            margin: 17px;
             
             p {
                 line-height: 22px;
@@ -411,6 +446,54 @@ table.black {
 
 
 /******************* SHOP ITEM *********************/
+.item-preview {
+    .img-big {
+        width: 460px;
+        height:500px;
+        margin-bottom: 20px;
+        
+        cursor: pointer;
+    }
+    
+    .img-small {
+        width: 140px;
+        height: 150px;
+        float:left;
+        margin-left: 20px;
+        &:first-child {margin-left: 0;}
+        
+        cursor: pointer;
+    }
+}
 
+.item-description {
+    h2 {margin-top: 0;}
+    
+    .buy-block {
+        width: auto;        
+        margin-top: 37px;
+        margin-bottom: 37px;
+    }
+    
+    .availability {
+        margin-top: 37px;
+        margin-bottom: 37px;
+        
+        .in-stock {
+            display: block;
+            float: left;
+        }
 
+        .item-num {
+            display: block;
+            text-align: right;
+            float: right;
+            color: #c4c3c2;
+        }
+    }
+    
+    h3:nth-of-type(2) {
+        margin-top: 67px;
+    }
+}
 /****************** /SHOP ITEM *********************/

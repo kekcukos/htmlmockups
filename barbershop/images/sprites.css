@@ -1,0 +1,40 @@
+.vk-active, .vk-inactive, .insta-active, .insta-inactive, .fb-active, .fb-inactive{
+	background: url(sprites.png) no-repeat;
+}
+
+.vk-active{
+	background-position: 0 -4px ;
+	width: 25px;
+	height: 16px;
+}
+
+.vk-inactive{
+	background-position: -49px -6px ;
+	width: 25px;
+	height: 16px;
+}
+
+.insta-active{
+	background-position: -101px -1px ;
+	width: 21px;
+	height: 21px;
+}
+
+.insta-inactive{
+	background-position: -149px -2px ;
+	width: 21px;
+	height: 21px;
+}
+
+.fb-active{
+	background-position: -201px 0;
+	width: 12px;
+	height: 22px;
+}
+
+.fb-inactive{
+	background-position: -253px -1px ;
+	width: 12px;
+	height: 22px;
+}
+
