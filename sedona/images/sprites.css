@@ -1,0 +1,220 @@
+.Sedona-arrows_03, .Sedona-arrows_05, .Sedona-arrows_09, .Sedona-arrows_10, .Sedona-arrows_13, .Sedona-arrows_14, .Sedona-BTNS_03, .Sedona-BTNS_05, .Sedona-BTNS_07, .Sedona-BTNS_12, .Sedona-BTNS_13, .Sedona-BTNS_14, .Sedona-BTNS_18, .Sedona-BTNS_19, .Sedona-BTNS_20, .Sedona-logos_10, .Sedona-logos_13, .Sedona-logos_20, .Sedona-logos_21, .Sedona-logos_27, .Sedona-logos_28, .Sedona-arrows_03, .Sedona-arrows_05, .Sedona-arrows_09, .Sedona-arrows_10, .Sedona-arrows_13, .Sedona-arrows_14, .calendar-disabled, .calendar-hover, .calendar-normal, .chk-active, .chk-disabled, .chk-hover, .unchk-active, .unchk-disabled, .unchk-hover{
+	background: url(sprites.png) no-repeat;
+}
+
+.Sedona-arrows_03{
+	background-position: -105px -60px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_05{
+	background-position: -105px -60px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_09{
+	background-position: -105px -60px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_10{
+	background-position: -105px -60px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_13{
+	background-position: -105px -60px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_14{
+	background-position: -105px -60px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-BTNS_03{
+	background-position: -400px 0;
+	width: 46px;
+	height: 48px;
+}
+
+.Sedona-BTNS_05{
+	background-position: -350.00000953674316px 0;
+	width: 47px;
+	height: 48px;
+}
+
+.Sedona-BTNS_07{
+	background-position: -300.00000953674316px 0;
+	width: 46px;
+	height: 48px;
+}
+
+.Sedona-BTNS_12{
+	background-position: -250.00000953674316px 0;
+	width: 46px;
+	height: 48px;
+}
+
+.Sedona-BTNS_13{
+	background-position: -199.00000953674316px 0;
+	width: 47px;
+	height: 48px;
+}
+
+.Sedona-BTNS_14{
+	background-position: -149.00000953674316px 0;
+	width: 46px;
+	height: 48px;
+}
+
+.Sedona-BTNS_18{
+	background-position: -100px 0;
+	width: 46px;
+	height: 48px;
+}
+
+.Sedona-BTNS_19{
+	background-position: -50.00000762939453px 0;
+	width: 47px;
+	height: 48px;
+}
+
+.Sedona-BTNS_20{
+	background-position: 0 0;
+	width: 46px;
+	height: 48px;
+}
+
+.Sedona-logos_10{
+	background-position: -94px -56px ;
+	width: 27px;
+	height: 33px;
+}
+
+.Sedona-logos_13{
+	background-position: -124px -56px ;
+	width: 27px;
+	height: 30px;
+}
+
+.Sedona-logos_20{
+	background-position: -62px -55px ;
+	width: 27px;
+	height: 33px;
+}
+
+.Sedona-logos_21{
+	background-position: 0 -55px ;
+	width: 27px;
+	height: 30px;
+}
+
+.Sedona-logos_27{
+	background-position: -155px -55px ;
+	width: 27px;
+	height: 33px;
+}
+
+.Sedona-logos_28{
+	background-position: -32px -55px ;
+	width: 27px;
+	height: 30px;
+}
+
+.Sedona-arrows_03{
+	background-position: -225.00000953674316px -70px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_05{
+	background-position: -225.00000953674316px -57px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_09{
+	background-position: -211.00000953674316px -70px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_10{
+	background-position: -212.00000953674316px -57px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_13{
+	background-position: -198.00000953674316px -70px ;
+	width: 9px;
+	height: 9px;
+}
+
+.Sedona-arrows_14{
+	background-position: -198px -57px ;
+	width: 9px;
+	height: 9px;
+}
+
+.calendar-disabled{
+	background-position: -372.00001525878906px -67px ;
+	width: 20px;
+	height: 22px;
+}
+
+.calendar-hover{
+	background-position: -349.00001525878906px -67px ;
+	width: 20px;
+	height: 22px;
+}
+
+.calendar-normal{
+	background-position: -326.00000762939453px -67px ;
+	width: 20px;
+	height: 22px;
+}
+
+.chk-active{
+	background-position: -302.00000762939453px -69px ;
+	width: 20px;
+	height: 20px;
+}
+
+.chk-disabled{
+	background-position: -277.00000762939453px -69px ;
+	width: 20px;
+	height: 20px;
+}
+
+.chk-hover{
+	background-position: -247.00000762939453px -69px ;
+	width: 20px;
+	height: 20px;
+}
+
+.unchk-active{
+	background-position: -426px -69px ;
+	width: 20px;
+	height: 20px;
+}
+
+.unchk-disabled{
+	background-position: -399px -69px ;
+	width: 20px;
+	height: 20px;
+}
+
+.unchk-hover{
+	background-position: -400px -48px ;
+	width: 20px;
+	height: 20px;
+}
+
