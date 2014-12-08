@@ -79,8 +79,8 @@ p, li, div, span, h1, h2, h3, h4, h5, h6, h7, td, th, article {
     }
     &:after {._clearfix;}
     
-    input {border: none;}
-    .plus, .minus {cursor: pointer;}
+    input {border: none; color: #000;}
+    .plus, .minus {cursor: pointer; font-size: 16px; color: #b2b2b2;}
 }
 
 .label-chk {
@@ -122,6 +122,31 @@ p, li, div, span, h1, h2, h3, h4, h5, h6, h7, td, th, article {
     input[type=checkbox]:disabled:checked + .pseudo-chk {background-position: -277px -69px;}
 }
 
+.input-field {
+    position: relative;
+    
+    .input-icon {
+        position: absolute;
+        top:   12px;
+        right: 12px;
+        background-image: url('images/sprites.png');
+        width: 20px;
+        height: 22px;
+    }
+    
+    .input-icon-calendar {
+        background-position: -372.00001525878906px -67px ;
+    }
+
+    input:hover + .input-icon-calendar {
+        background-position: -349.00001525878906px -67px ;    
+    }
+
+    input:focus + .input-icon-calendar {
+        background-position: -326.00000762939453px -67px;        
+    }
+}
+
 /*********/
 
 /*  misc */
@@ -160,9 +185,24 @@ header.header {
             }                
         }
         
+        li.active {
+            color: #766357;   
+        }
+        li.active:hover {
+            color: #604e43;   
+        }
+        
         a {
             text-decoration: none;
             color: #000;
+            
+            &:hover {
+                color: @blue;    
+            }
+
+            &:active {
+                color: #cacaca;
+            }
         }
     }
 }
@@ -389,6 +429,15 @@ header.header {
                 padding: 14px 15px;
             }
             
+            input[type=text]:hover {
+                background-color: #ebebeb;
+            }
+            
+            input[type=text]:focus {
+                background-color: #fff;
+                border: 2px solid #e5e5e5;
+                padding: 12px 15px;
+            }
             
             .row > ul {display: inline}
             
@@ -480,7 +529,7 @@ header.header {
         margin-top: 10px;
         margin-bottom: 10px;
 
-        background-color: rgba(100, 100, 100, .4);
+        background-color: #878a7a;
 
         &>div {
             position: relative;
@@ -491,7 +540,7 @@ header.header {
             width: 100px;
             height: 2px;
             z-index: 2;
-            background-color: #000;
+            background-color: #fff;
         }
         
         .slide-min, .slide-max {
@@ -542,6 +591,10 @@ header.header {
             cursor: pointer;
         }
         
+        &.sort:hover {
+            color: @blue;   
+        }
+        
         &.sort-active {
             border-bottom: none;
             color: @blue;
@@ -563,22 +616,26 @@ header.header {
             cursor: pointer;
             
             &.sort-icon-up {
-                background-position: -212px -57px;
-                &:hover {
-                    background-position: -198px -57px;
-                }
+                background-position: -225px -70px;                
+                
                 &.active {
                     background-position: -198px -70px;
+                }
+                
+                &:hover {
+                    background-position: -211px -70px;
                 }
             }
             
             &.sort-icon-down {
-                background-position: -211px -70px;
-                &:hover {
-                    background-position: -225px -57px;
-                }
+                background-position: -225px -57px;
+
                 &.active {
-                    background-position: -225px -70px;
+                background-position: -198px -57px;
+                }
+
+                &:hover {
+                background-position: -212px -57px;
                 }
             }
         }
@@ -595,10 +652,28 @@ header.header {
 
 .btn-blue {
     background-color: @blue;
+    text-decoration: none;
+    
+    &:hover {
+        background-color: #669ec0;
+    }
+    &:active {
+        color: #94b9d2 ;
+        background-color: #5496bd;
+    }
 }
 
 .btn-brown {
-    background-color: @brown;   
+    background-color: @brown;
+    text-decoration: none;
+    
+    &:hover {
+        background-color: #604e43;
+    }
+    &:active {
+        color: #928a85;
+        background-color: #503e33;
+    }
 }
 
 .search-results {
@@ -620,6 +695,20 @@ header.header {
                 font-size:21px;
                 line-height: 16px;
             }
+            
+            .hotel-name {
+                text-decoration: none;
+                color: #000;
+
+                &:hover {
+                    color: @blue;    
+                }
+
+                &:active {
+                    color: #cacaca;
+                }
+            }            
+            
             .text-normal {
                 line-height: 6px;
                 margin-top: 18px;
@@ -693,11 +782,11 @@ footer.footer {
         width: 26px;
     }
     
-    .icon-aaa {background-position: 0 -55px;}
+    .icon-aaa {background-position: -124px -56px;}
     .icon-aaa:active {background-position: -32px -55px;}
-    .icon-aaa:hover {background-position: -124px -56px;}
+    .icon-aaa:hover {background-position: 0 -55px;}
     
-    .icon-htmlacademy {background-position: -62px -55px;}
+    .icon-htmlacademy {background-position: -94px -56px;}
     .icon-htmlacademy:active {background-position: -155px -55px;}
-    .icon-htmlacademy:hover  {background-position: -94px -56px;}
+    .icon-htmlacademy:hover  {background-position: -62px -55px;}
 }
