@@ -224,24 +224,23 @@ header.header ul a:active {
 .hero .welcome,
 .hero .title,
 .hero .why {
+  display: block;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   color: rgba(0, 0, 0, 0);
 }
 .hero .welcome {
   height: 86px;
-  background-image: url('images/intro-welcome.png');
   margin-bottom: 60px;
 }
 .hero .title {
   height: 78px;
-  background-image: url('images/intro-sedona.png');
   margin-top: 60px;
   margin-bottom: 60px;
 }
 .hero .why {
   height: 80px;
-  background-image: url('images/intro-because.png');
   margin-top: 60px;
   margin-bottom: 60px;
 }
